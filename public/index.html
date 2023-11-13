@@ -9,24 +9,28 @@
 </head>
 <body>
     <div class="media-body">
-        <div>
-            <h1 class="title">
-            Group Chat
-            </h1>
-            <div class="user">
-            user
-            <input type="text" class="name-input" id="name-input" value="anonymous">
-        </div>
-        </div>
+        <div class="header">
+             <div>
+                    <h1 class="title">
+                    Group Chat
+                    </h1>
+                    <div class="user">
+                    user
+                    <input type="text" class="name-input" id="name-input" value="anonymous">
+                     </div>
+                 </div>
+         </div>
         <ul class="messages-body" id="messages-body">
     
         </ul>
+        <div class="footer">
         <form class="message-form" id="message-form">
             <input type="text" id="message-input" class="message-input">
             <button type="submit" id="send-message" class="send-message">send <i class="fas fa-paper-plane"></i> </button>
         </form>
         <p class="client-total" id="client-total">Clients Total: 1</p>
     </div>
+</div>
     
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js" integrity="sha512-42PE0rd+wZ2hNXftlM78BSehIGzezNeQuzihiBCvUEB3CVxHvsShF86wBWwQORNxNINlBPuq7rG4WWhNiTVHFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

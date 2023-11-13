@@ -32,6 +32,7 @@ function onMessageSend(){
 
 socket.on('chat-message', data =>{
      console.log(data);
+     clearFeedback();
      messageTone.play();
      addMessageUI(false, data)
 })
