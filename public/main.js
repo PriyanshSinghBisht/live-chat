@@ -18,7 +18,7 @@ socket.on('clients-total', data => {
 })
 
 function onMessageSend(){
-
+    if(messageInput.value === '') return;
      const data = {
           user: userName.value,
           message: messageInput.value,
@@ -27,6 +27,7 @@ function onMessageSend(){
 
      addMessageUI(true, data);
      socket.emit('message', data);
+     messageInput.value = '';
 }
 
 socket.on('chat-message', data =>{
