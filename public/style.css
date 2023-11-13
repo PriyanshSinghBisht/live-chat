@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.media-body{
+    width: clamp(0%, 100vw, 400px);
+    background-color: #d7d7d7;
+    margin-inline: auto;
+    border-radius: 20px;
+}
+
+@media (min-width: 800px) {
+     .media-body{
+        margin-top: 100px;
+     }
+}
+
+.title{
+    font-size: 30px;
+    font-weight: 700px;
+    text-align: center;
+    padding: 5px 0 5px 0;
+}
+
+.user{
+    padding: 10px 10px;
+    font-size: 25px;
+    font-weight: 700;
+    border-bottom: 1px solid #a8a8a8;
+    color: #484848;
+    display: flex;
+    align-items: center;
+}
+
+.user input{
+    color: #3d3d3d;
+    padding: 3px 4px;
+    outline: none;
+    font-size: 20px;
+    flex: 1;
+    min-width: 0%;
+    max-width: 200px;
+    margin-left: 20px;
+}
+
+.messages-body{
+    padding: 14px 12px 0 12px;
+    height: 350px;
+    overflow-y: scroll;
+}
+
+li{
+    list-style: none;
+}
+
+.message-left, .message-right{
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    color: #fff;
+    max-width: 250px;
+    word-break: break-all;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.stamp{
+    font-size: 13px;
+   
+}
+.message-right{
+    background-color: black;
+    text-align: right;
+    margin-left: auto;
+    border-radius: 16px 16px 0 16px;
+}
+.message-left{
+    background-color: #989898;
+    text-align: left;
+    margin-right: auto;
+    border-radius: 16px 16px 16px 0;
+}
+
+.feedback{
+    text-align: center;
+    color: #7a7a7a;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.message-form{
+    flex: 1;
+    display: flex;
+}
+
+.message-input{
+    flex: 1;
+    padding: 2px 10px 2px 10px;
+    font-size: 18px;
+    color: #787878;
+}
+
+.send-message{
+    padding: 9px 14px;
+    color: white;
+    background-color: hsl(200, 50%, 50%);
+}
+
+.client-total{
+    text-align: center;
+    color: #4a4a4a;
+    padding: 10px;
+}
