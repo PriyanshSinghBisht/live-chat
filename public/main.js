@@ -17,6 +17,15 @@ socket.on('clients-total', data => {
      totalClients.innerText = `Clients Total : ${data}`;
 })
 
+function scrollBottom(){
+     messageContainer.scrollTo({
+          left: 0,
+          top: messageContainer.scrollHeight,
+           behavior: 'smooth'
+         });
+         console.log('scroll')
+}
+
 function onMessageSend(){
     if(messageInput.value === '') return;
      const data = {
@@ -45,11 +54,13 @@ function addMessageUI( isOwnMessaage, data){
  </li>
       `;
       messageContainer.innerHTML += element;
+
+      scrollBottom();
 }
 
 messageInput.addEventListener('focus', () => {
      const data = userName.value;
-   sendFeedback(data);
+     sendFeedback(data);
 });
 
 
@@ -61,6 +72,7 @@ messageInput.addEventListener('keydown', () => {
 messageInput.addEventListener('blur', () => {
      const data = userName.value;
     sendFeedback(data);
+      clearFeedback();
  });
 
 function sendFeedback(data){
@@ -75,9 +87,9 @@ socket.on('feedback', (data) =>{
      ${data} is ✍️ typing somthing...
    </li>
      `;
-
+   
      messageContainer.innerHTML += element;
-
+  
 })
 
 function clearFeedback(){
